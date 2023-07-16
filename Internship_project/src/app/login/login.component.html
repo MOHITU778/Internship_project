@@ -1,0 +1,39 @@
+
+
+  <body>
+    <div class="container">
+    <div class="wrapper">
+      <header>NOKIA</header>
+      <br>
+    <span class="faciliviss">FACILIVSS</span>
+      <form [formGroup]="loginForm">
+        <div class="field email">
+          <div class="input-area">
+            <input type="text" placeholder="Email" formControlName="email">
+            <span style="color:red;font-size: 15px;margin-right: 168px;" *ngIf="resetControls['email'].errors?.['required'] && resetControls['email'].touched">Email is required</span>
+
+            <span style="color:red;font-size: 15px;margin-right: 168px;" *ngIf="resetControls['email'].errors?.['pattern']">Please enter valid email</span>
+            <i class='icon fas fa-user-circle' style="color: #000000;"></i>
+            <!-- <i class="error error-icon fas fa-exclamation-circle"></i> -->
+          
+          </div>
+          
+          
+        </div>
+        <div class="field password">
+          <div class="input-area">
+            <input [type]="showPass ? 'text' : 'password'" placeholder="Password" formControlName="password">
+            <i class="icon fas fa-lock" style="color: #000000;"> </i>
+            <i class="icon fa fa-eye" (click)="showPassword()" style="margin-left: 260px;cursor: pointer;color: #000000;margin-right: 168px;"></i>
+          </div>
+    
+          <span  style="color: red;font-size: 15px;margin-right: 168px;" *ngIf="resetControls['password'].errors?.['required'] && resetControls['password'].touched">Password is required</span>
+          <span  style="color: red;font-size: 15px;margin-right: 58px;" *ngIf="resetControls['password'].errors?.['minlength']">Password should be minimum 6 characters</span>
+        </div>
+        <div class="pass-txt"><a href="#">Forgot password?</a></div>
+        <input type="submit" value="Submit" (click)="submit()">
+      </form>
+    </div>
+    </div>
+  </body>
+  

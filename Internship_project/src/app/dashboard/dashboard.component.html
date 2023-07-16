@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="header">
+        <div class="heading">Energyviss/Live Dashboard</div>
+        <div class="icon">
+
+            <i class="fas fa-clock"></i>
+            <i class='fas fa-user-alt'></i>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2 style="margin-left: 5%;">Floor:</h2>
+        <div class="dropdown">
+            <mat-form-field>
+                <mat-label>Floor</mat-label>
+                <mat-select [(value)]="selected1">
+                    <mat-option value="option1">1</mat-option>
+                    <mat-option value="option2">2</mat-option>
+                    <mat-option value="option3">3</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <h2 style="margin-left: 5%;">Section:</h2>
+        <div class="dropdown">
+            <mat-form-field>
+                <mat-label>Section</mat-label>
+                <mat-select [(value)]="selected2">
+                    <mat-option value="option1">Lab1</mat-option>
+                    <mat-option value="option2">Lab2</mat-option>
+                    <mat-option value="option3">Lab3</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <h2 style="margin-left: 5%;">View:</h2>
+        <div class="dropdown">
+            <mat-form-field>
+                <mat-label>View</mat-label>
+                <mat-select [(value)]="selected3">
+                    <mat-option value="option1">Individual</mat-option>
+                    <mat-option value="option2">Individual</mat-option>
+                    <mat-option value="option3">Individual</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <h2 style="margin-left: 5%;">Meter:</h2>
+        <div class="dropdown">
+            <mat-form-field>
+                <mat-label>Meter</mat-label>
+                <mat-select [(value)]="selected4">
+                    <mat-option value="option1">Meter1</mat-option>
+                    <mat-option value="option2">Meter12</mat-option>
+                    <mat-option value="option3">Meter3</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="box 2">
+        <h2 style="margin-left: 8%;">Energy:</h2>
+        <span class="values">156,610kWh</span>
+        <h2 style="margin-left: 10%;">Last Updated:</h2>
+        <span class="values">22/06/2021 12:07PM</span>
+        <h2 style="margin-left: 5%;">Next Hour Predicted Energy:</h2>
+        <span class="values">157,393.05 kWh</span>
+    </div>
+
+    <div class="box 3">
+        <h4>Key Parameters</h4>
+        <i class="fa-solid fa-bars"></i>
+      
+    </div>
+
+    <div style="width:600px;height: 600px;">
+    <canvas id ="myChart"></canvas>
+</div>
+</div>
